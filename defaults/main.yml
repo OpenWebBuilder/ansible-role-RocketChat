@@ -1,14 +1,15 @@
 ---
 deploy_method: "Docker"
 
-release: "{{ latest_release }}"
+release: "{{ working_release }}" #"{{ latest_release }}"
 
 root_url: "{{ test_domain }}"
 
 ip: "{{ ansible_default_ipv4.address }}"
 
-host_port: 80 #"{{ default_port }}"
+host_port: "{{ default_port }}"
 
 
-# Optional: bash_history
+# Optional: Devel Helper
 devel: false
+pull: true

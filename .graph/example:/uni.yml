@@ -1,0 +1,7 @@
+- hosts: node
+  vars:
+    devel: true
+    pull: false
+  roles:
+    - UniInc.Docker
+    - ansible-role-RocketChat

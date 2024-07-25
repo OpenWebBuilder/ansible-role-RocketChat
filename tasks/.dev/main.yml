@@ -14,11 +14,13 @@
   become: true
   loop:
   - "cd {{ conf_dir }}"
+  - "docker compose logs -f rocketchat"
+  - "docker compose pull"
   - "cat .env"
   - "docker compose up -d"
-  - "docker compose logs -f rocketchat"
 
 - name: Docker compose pull
   ansible.builtin.shell: docker compose pull
   args:
     chdir: "{{ conf_dir }}"
+  when: pull

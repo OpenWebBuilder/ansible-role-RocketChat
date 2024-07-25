@@ -1,10 +1,13 @@
 ---
+working_release: 6.9.4
+
 # from: https://github.com/RocketChat/Rocket.Chat/releases
 latest_release: 6.10.0
 
 conf_dir: "/opt/uni/docker/rocket.chat"
 
 default_port: 3000
+#80
 
 default_domain: localhost
 
