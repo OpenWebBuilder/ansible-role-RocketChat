@@ -2,6 +2,10 @@
 # from: https://github.com/RocketChat/Rocket.Chat/releases
 latest_release: 6.10.0
 
-conf_dir: "{{ ansible_env.HOME }}/.docker"
+conf_dir: "/opt/uni/docker/rocket.chat"
 
-test_localhost: "http://localhost:3000"
+default_port: 3000
+
+default_domain: localhost
+
+test_localhost: "http://{{ default_domain }}:{{ default_port }}"

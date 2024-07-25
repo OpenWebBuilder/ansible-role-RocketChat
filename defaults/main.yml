@@ -4,3 +4,9 @@ deploy_method: "Docker"
 release: "{{ latest_release }}"
 
 root_url: "{{ test_localhost }}"
+
+ip: "{{ ansible_default_ipv4.address }}"
+
+domain: "{{ default_domain }}"
+
+port: "{{ default_port }}"

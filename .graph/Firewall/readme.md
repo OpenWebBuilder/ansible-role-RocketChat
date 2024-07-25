@@ -1,0 +1,1 @@
+https://docs.rocket.chat/docs/firewall-configuration

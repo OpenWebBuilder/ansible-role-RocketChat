@@ -11,7 +11,7 @@
 
 - name: Template docker compose
   ansible.builtin.template:
-    src: compose.yml.j2
+    src: "{{ item }}.j2"
     dest: "{{ conf_dir }}/{{ item }}"
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
@@ -20,3 +20,8 @@
   loop:
   - compose.yml
   - .env
+
+
+- name: Firewall
+  ansible.builtin.include_tasks:
+    file: Firewall/main.yml
