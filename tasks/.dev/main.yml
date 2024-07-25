@@ -13,7 +13,12 @@
     line: "{{ item }}"
   become: true
   loop:
-  - "cd /opt/uni/docker/rocket.chat"
+  - "cd {{ conf_dir }}"
   - "cat .env"
   - "docker compose up -d"
   - "docker compose logs -f rocketchat"
+
+- name: Docker compose pull
+  ansible.builtin.shell: docker compose pull
+  args:
+    chdir: "{{ conf_dir }}"

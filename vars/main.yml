@@ -9,5 +9,5 @@ default_port: 3000
 default_domain: localhost
 
 http: "http://"
-test_domain: "{{ http }}rocket.test"
+test_domain: "{{ http }}rocket.test:{{host_port}}"
 test_localhost: "{{ http }}{{ default_domain }}"
