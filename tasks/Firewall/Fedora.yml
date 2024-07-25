@@ -2,7 +2,7 @@
 
 - name: Open Firewall ports
   ansible.posix.firewalld:
-    port: 3000/tcp
+    port: "{{ host_port }}/tcp"
     permanent: true
     state: enabled
   become: true

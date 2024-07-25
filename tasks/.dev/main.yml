@@ -16,3 +16,4 @@
   - "cd /opt/uni/docker/rocket.chat"
   - "cat .env"
   - "docker compose up -d"
+  - "docker compose logs -f rocketchat"

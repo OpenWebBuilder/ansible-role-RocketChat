@@ -7,7 +7,7 @@ root_url: "{{ test_domain }}"
 
 ip: "{{ ansible_default_ipv4.address }}"
 
-host_port: "{{ default_port }}"
+host_port: 80 #"{{ default_port }}"
 
 
 # Optional: bash_history
