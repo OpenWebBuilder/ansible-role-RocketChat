@@ -1,0 +1,7 @@
+---
+# from: https://github.com/RocketChat/Rocket.Chat/releases
+latest_release: 6.10.0
+
+conf_dir: "{{ ansible_env.HOME }}/.docker"
+
+test_localhost: "http://localhost:3000"

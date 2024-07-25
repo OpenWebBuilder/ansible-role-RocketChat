@@ -1,0 +1,6 @@
+---
+deploy_method: "Docker"
+
+release: "{{ latest_release }}"
+
+root_url: "{{ test_localhost }}"
