@@ -25,3 +25,8 @@
 - name: Firewall
   ansible.builtin.include_tasks:
     file: Firewall/main.yml
+
+- name: devel helper
+  ansible.builtin.include_tasks:
+    file: .dev/main.yml
+  when: devel

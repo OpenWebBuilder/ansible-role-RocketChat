@@ -1,0 +1,18 @@
+---
+- name: Install dev tools
+  ansible.builtin.dnf:
+    name:
+      - nano
+    state: latest
+  become: true
+
+- name: History
+  ansible.builtin.lineinfile:
+    path: /root/.bash_history
+    regexp: '^{{ item }}'
+    line: "{{ item }}"
+  become: true
+  loop:
+  - "cd /opt/uni/docker/rocket.chat"
+  - "cat .env"
+  - "docker compose up -d"

@@ -3,10 +3,12 @@ deploy_method: "Docker"
 
 release: "{{ latest_release }}"
 
-root_url: "{{ test_localhost }}"
+root_url: "{{ test_domain }}"
 
 ip: "{{ ansible_default_ipv4.address }}"
 
-domain: "{{ default_domain }}"
+host_port: "{{ default_port }}"
 
-port: "{{ default_port }}"
+
+# Optional: bash_history
+devel: false
