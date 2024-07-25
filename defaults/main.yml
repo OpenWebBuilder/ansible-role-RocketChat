@@ -1,4 +1,12 @@
 ---
+# Overwrite:
+admin_email: "adm@localhost.test"
+admin_pass: "supersecret"
+
+
+# default
+env_template: admin-user.env
+
 deploy_method: "Docker"
 
 release: "{{ working_release }}" #"{{ latest_release }}"
@@ -13,3 +21,4 @@ host_port: "{{ default_port }}"
 # Optional: Devel Helper
 devel: false
 pull: true
+

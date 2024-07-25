@@ -21,6 +21,17 @@
   - compose.yml
   - .env
 
+# Todo: Use set_fact for $env_template based on if admin is set!
+
+# - name: Template .env
+#   ansible.builtin.template:
+#     src: "{{ env_template }}.j2"
+#     dest: "{{ conf_dir }}/.env"
+#     owner: "{{ ansible_env.USER }}"
+#     group: "{{ ansible_env.USER }}"
+#     mode: '0644'
+#   become: true
+
 
 - name: Firewall
   ansible.builtin.include_tasks:
