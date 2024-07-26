@@ -23,4 +23,3 @@
   ansible.builtin.shell: docker compose pull
   args:
     chdir: "{{ conf_dir }}"
-  when: pull

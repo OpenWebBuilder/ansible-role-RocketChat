@@ -3,3 +3,17 @@
   ansible.builtin.include_tasks:
     file: Docker.yml
   when: deploy_method == "Docker"
+
+
+- name: Create and start services
+  community.docker.docker_compose_v2:
+    project_src: "{{ conf_dir }}"
+    pull: missing
+  register: output
+  when: start
+
+
+- name: devel helper
+  ansible.builtin.include_tasks:
+    file: .dev/main.yml
+  when: devel

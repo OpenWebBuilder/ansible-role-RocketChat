@@ -21,7 +21,7 @@
   - compose.yml
   - .env
 
-# Todo: Use set_fact for $env_template based on if admin is set!
+# Todo: Setup admin user. Use set_fact: $env_template to override docker compose template!
 
 # - name: Template .env
 #   ansible.builtin.template:
@@ -36,8 +36,3 @@
 - name: Firewall
   ansible.builtin.include_tasks:
     file: Firewall/main.yml
-
-- name: devel helper
-  ansible.builtin.include_tasks:
-    file: .dev/main.yml
-  when: devel
