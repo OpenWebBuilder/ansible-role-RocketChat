@@ -1,5 +1,8 @@
 ---
-working_release: 6.9.4
+working_release: 6.10.1  # June 30, 2024
+
+# Broken:
+#6.9.4
 
 # from: https://github.com/RocketChat/Rocket.Chat/releases
 latest_release: 6.10.0
