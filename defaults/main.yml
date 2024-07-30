@@ -1,4 +1,7 @@
 ---
+# Set: Change to your Website!
+rocketchat_root_domain: chat.rocketchat.test
+
 # Overwrite:
 admin_email: "adm@localhost.test"
 admin_pass: "supersecret"
@@ -9,7 +12,7 @@ deploy_method: "Docker"
 
 release: "{{ working_release }}" #"{{ latest_release }}"
 
-root_url: "{{ test_domain }}"
+root_url: "{{ http }}{{ test_domain }}:{{host_port}}"
 
 ip: "{{ ansible_default_ipv4.address }}"
 
